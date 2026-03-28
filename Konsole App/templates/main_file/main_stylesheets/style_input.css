@@ -1,0 +1,21 @@
+input {
+    background: dimgray;
+    color: floralwhite;
+    padding: 14px;
+    margin: 7px;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    border: 8px solid black;
+}
+
+input:focus {
+    border: 2px solid dimgray;
+    color: dimgray;
+    background: floralwhite;
+    opacity: 0.5;
+}
