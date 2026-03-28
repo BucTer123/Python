@@ -1,5 +1,6 @@
 import time
 import script
+from colorama import Fore
 
 def main():
     now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -10,7 +11,10 @@ def main():
 
     if question == "y" or question == "Y":
         print("Okay!")
-        script.flask()
-
+        script.zz()
+    else:
+        print(Fore.RED + "SHUTDOWN!")
+        exit(0)
+    
 if __name__ == "__index__":
     main()
