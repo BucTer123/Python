@@ -45,5 +45,6 @@ html = """
 </html>
 """
 
-webview.create("UI", html=html)
-webview.run()
+def script():
+    webview.create("UI", html=html)
+    webview.run()
