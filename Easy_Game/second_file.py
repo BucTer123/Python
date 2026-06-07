@@ -12,5 +12,3 @@ def inventary_function():
                 running = False
 
         screen.fill("blue")
-
-        text = font.render("Choice number :")
