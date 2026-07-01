@@ -44,3 +44,7 @@ if __name__ == "__main__":
         full_url = f"http://example.com{form_action}"
         vulnerable = check_sql_injection(full_url)
         print(f"URL: {full_url} | SQL Injection Vulnerable: {vulnerable}")
+
+
+
+#CREATED BY SHALAWA!
