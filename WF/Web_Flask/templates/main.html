@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web</title>
+</head>
+<style>
+    body {
+        background: white;
+        color: gray;
+        font-family: sans-serif;
+        font-size: medium;
+        font-weight: bolder;
+        font-style: initial;
+        padding: 0;
+        margin: 0;
+        max-width: 1080px;
+        width: 100%;
+        max-height: 1920px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    button {
+        background: blue;
+        color: whitesmoke;
+        padding: 12px;
+        margin: 6px;
+        border: 2px solid black;
+    }
+
+    button:focus {
+        background: whitesmoke;
+        color: blue;
+        border: 4px solid black;
+    }
+
+    button:hover {
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+
+    button:active {
+        opacity: 0.3;
+        transform: scale(3.3);
+    }
+
+    button:active {
+        opacity: 0.1;
+        transform: translate3d(4px);
+    }
+</style>
+<body>
+    <div class="main_text">
+        Welcome!
+
+        This is test website for "script.py"!
+    </div>
+    <button id="btn1" type="button">Okay!</button>
+</body>
+<script>
+    const btn = document.getElementById("btn1");
+
+    btn.addEventListener("click", function () {
+        window.alert("Okay!");
+        window.alert("Bye!");
+    })
+</script>
+</html>
