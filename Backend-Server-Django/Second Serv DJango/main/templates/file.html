@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>FILE</title>
+</head>
+<body></body>
+<script type="module">
+  import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
+
+  kaboom();
+
+  kaboom({
+    background: [140, 70, 130]
+  })
+
+  function new_label(txt_l, pos_l) {
+    const label = add([
+      rect(120, 40, {radius : 4}},
+      pos(pos_l),
+      anchor("center"),
+      outline(4),
+    ])
+
+    label.add([
+      text(txt_l),
+      anchor("center"),
+      color(0, 0, 0),
+    ])
+
+    return label
+  }
+  function new_button(txt_b, p_b, f_b) {
+        const btn = add ([
+            rect(240, 80,  {radius : 8}),
+            pos(p_b),
+            area(),
+            anchor("center"),
+            outline(4),
+        ])
+
+        btn.add ([
+            text(txt_b),
+            anchor("center"),
+            color(0, 0, 0),
+        ])
+
+        btn.onHoverUpdate(() => {
+            const t = time() * 10
+            btn.color = hsl2rgb((t / 10) % 1, 0.6, 0.7)
+            btn.scale = vec2(1.2)
+            setCursor("pointer")
+        })
+
+        btn.onHoverEnd(() => {
+            btn.scale = vec2(1.2)
+            btn.color = rgb()
+        })
+
+        btn.onClick(f_b)
+
+        return btn
+    }
+
+    new_label("Welcome!", vec2(200, 100));
+    new_label("Choice button :", vec2(200, 200));
+    new_button("Exit", vec2(200, 300), () => debug.log("Nope!");
+    new_button("KaboomJS Site", vec2(200, 400), () => window.location.href = "https://kaboomjs.com/");
+    new_button("Github", vec2(200, 500), () => window.location.href = "https://github.com/BucTer123");
+</script>
+</html>

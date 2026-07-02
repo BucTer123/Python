@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" >
+	<title>UI</title>
+</head>
+<style>
+	body {
+		background: whitesmoke;
+		color: black;
+		font-family: sans-serif;
+		font-size: medium;
+		font-style: initial;
+		font-weight: bolder;
+		padding: 0;
+		margin: 0;
+		max-width: 1920px;
+		width: 100%;
+		max-height: 1080px;
+		height: 100%;
+	}
+	
+	.inputs {
+		background: ghostwhite;
+		color: black;
+		padding: 192px;
+		margin: 108px;
+		opacity: 1;
+		border: 1px solid dimgray;
+	}
+	
+	.inputs:focus {
+		background: black;
+		color: ghostwhite;
+		opacity: 0.9;
+		border: 1px solid blue;
+	}
+	
+	input {
+		background: white;
+		color: black;
+		padding: 18px;
+		margin: 9px;
+		border: 1px solid dimgray;
+		opacity: 1;
+	}
+	
+	input:focus {
+		background: black;
+		color: white;
+		border: 1px solid blue;
+		opacity: 0.9;
+	}
+	
+	button {
+		background: black;
+		color: white;
+		padding: 14px;
+		margin: 7px;
+		border: 1px solid dimgray;
+		opacity: 1;
+	}
+	
+	button:focus {
+		background: white;
+		color: black;
+		border: 1px solid blue;
+		opacity: 0.9;
+	}
+	
+	button:hover {
+		opacity: 0.8;
+		border: 1px solid cyan;
+		transform: translateY(5px);
+	}
+	
+	button:active {
+		opacity: 0.3;
+		border: 1px solid cyan;
+		transform: translateX(4px);
+	}
+</style>
+<body>
+	<div class="inputs">
+		<input id="username" type="text" placeholder="Write username :"/>
+		<input id="password" type="password" placeholder="Write password :"/>
+		<button id="contnue" type="button">Login</button>
+	</div>
+	
+	<h1>Products</h1>
+
+	{% for product in products %}
+		<p>{{ product.name }} - {{ product.price }}</p>
+	{% endfor %}
+</body>
+<script>
+	const inp1 = document.getElementById("username");
+	const inp2 = document.getElementById("password");
+	const btn1 = document.getElementById("continue");
+
+	function open_main_html(boolean) {
+		if (boolean === "TRUE") {
+			const txt1 = inp1.value;
+			const txt2 = inp2.value;
+
+			if (txt1 === "" && txt2 === "") {
+				window.alert("ERROR!: Write username and password!");
+				console.log("Checking errors.....\n");
+				console.log("ERROR!: Write username and password!");
+			} else {
+				window.location href = "main.html";
+				console.log("Opening main.html");
+			}
+		}
+	}
+	
+	btn1.addEventListener("click", function () {
+		open_main_html("TRUE");
+	});
+
+	document.addEventListener("keydown", function (event) {
+		if (event.key === "Enter") {
+			open_main_html("TRUE");
+		}
+	});
+</script>
+</html>
