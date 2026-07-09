@@ -6,5 +6,5 @@ using :
   servers (Flask, Django)
   AI (OpenAI)
   Web Applications (Webview)
-  Applications (Tkinter)
+  Applications (Tkinter) and Pygame(GameDev)
   
