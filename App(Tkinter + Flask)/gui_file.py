@@ -43,7 +43,4 @@ def launch_app():
             return render_template("index.html")
 
         print("Site is opened on 8000 localhost!")
-
         app.run(debug=True, port=8000)
-
-        exit(0)
