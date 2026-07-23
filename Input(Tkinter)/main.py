@@ -11,9 +11,8 @@ def main():
     entry_text.pack()
     entry = tk.Entry(root)
     entry.pack()
-
+    
     root.mainloop()
     exit(0)
-
 if __name__ == "__main__":
     main()
