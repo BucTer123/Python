@@ -10,7 +10,6 @@ def launch_app():
     e1_text = tk.Label(w1, text="Write route to create for site :")
     e1_text.pack()
     e1 = tk.Entry(w1)
-    e1.get()
 
     if e1.get() == "":
         print("ERROR!")
@@ -36,7 +35,7 @@ def launch_app():
         file2.write("}")
 
         file3 = open("templates/script.js", "w")
-        file3.write("console.log();")
+        file3.write("console.log('Welcome!');")
 
         app = Flask(__name__)
         @app.route(e1.get())
