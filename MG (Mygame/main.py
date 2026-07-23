@@ -62,8 +62,7 @@ def start_game():
     root.title("Starting?")
     root.geometry(300, 200)
 
-    tk.Label(root,
-             text="Do you want to start?",)
+    tk.Label(root,text="Do you want to start?")
     
     tk.Button(root, text="Yes", command=starting_game)
     tk.Button(root, text="No", command=exit(0))
