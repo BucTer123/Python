@@ -43,19 +43,14 @@ class cmd:
         print(text_output)
     def echoln(text_echoln):
         print(text_echoln):
-    def cprint(text_cprint, color):
-        if color == "red" or color == "RED":
-            print(Fore.RED + text_cprint)
-        elif color == "cyan" or color == "CYAN":
-            print(Fore.CYAN + text_cprint)
-        elif color == "blue" or color == "BLUE":
-            print(Fore.BLUE + text_cprint)
-        elif color == "green" or color == "GREEN":
-            print(Fore.GREEN + text_cprint)
-        elif color == "black" or color == "BLACK":
-            print(Fore.BLACK + text_cprint)
-        elif color == "white" or color == "WHITE":
-            print(Fore.WHITE + text_cprint)
+    def printf(text_printf):
+        print(text_printf)
+    def echo(text_echo):
+        print(text_echo)
+    def out(text_out):
+        print(text_out)
+    def sprints(text_sprints):
+        print(sprints)
 
 class os:
     def ext(status) -> int:
