@@ -2,80 +2,84 @@ import requests as rq
 import tkinter as tk 
 import math
 import time 
+from colorama import Fore
+import os
 
-def time_now():
-    now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    print("Time now :" + now)
+class cmd:    
+    def time_now():
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        print("Time now :" + now)
     
-def math():
-    a = float(input("Write first number :"))
-    b = float(input("Write second number :"))
-    c = input("> ");
-    
-    if c == "hlp_math":
-        print("1 => hlp_math\n")
-        print("2 => +(plus) \n")
-        print("3 => -(minus) \n")
-        print("4 => *(multiply/multi)\n")
-        print("5 => /(divide)\n")
-        print("6 => **(power/pow)\n")
-    elif c == "+" or c == "plus":
-        plus = a + b
-        print("A + B =" + plus)
-    elif c == "-" or c == "minus":
-        minus = a - b 
-        print("A - B =" + minus)
-    elif c == "*" or c == "multiply" or c == "multi":
-        multi = a * b
-        print("A * B =" + multi)
-    elif c == "/" or c == "divide":
-        if (a == 0 or b == 0):
-            print("ERROR!: Divide by zero!")
-        else:
-            divide = a / b 
-            print("A / B =" + divide)
-    elif c == "**" or c == "power" or c == "pow":
-        powa = a * a 
-        powb = b * b 
+    def math(a, b, c) -> float:
+        if c == "hlp_math":
+            print("1 => hlp_math\n")
+            print("2 => +(plus) \n")
+            print("3 => -(minus) \n")
+            print("4 => *(multiply/multi)\n")
+            print("5 => /(divide)\n")
+            print("6 => **(power/pow)\n")
+        elif c == "+" or c == "plus":
+            plus = a + b
+            print("A + B =" + plus)
+        elif c == "-" or c == "minus":
+            minus = a - b 
+            print("A - B =" + minus)
+        elif c == "*" or c == "multiply" or c == "multi":
+            multi = a * b
+            print("A * B =" + multi)
+        elif c == "/" or c == "divide":
+            if (a == 0 or b == 0):
+                print("ERROR!: Divide by zero!")
+            else:
+                divide = a / b 
+                print("A / B =" + divide)
+        elif c == "**" or c == "power" or c == "pow":
+            powa = a * a 
+            powb = b * b 
         
-        print("Power(a) =" + powa + "\n")
-        print("Power(b) =" + powb + "\n")
+            print("Power(a) =" + powa + "\n")
+            print("Power(b) =" + powb + "\n")
+    def output(text_output):
+        print(text_output)
+    def echoln(text_echoln):
+        print(text_echoln):
+    def cprint(text_cprint, color):
+        if color == "red" or color == "RED":
+            print(Fore.RED + text_cprint)
+        elif color == "cyan" or color == "CYAN":
+            print(Fore.CYAN + text_cprint)
+        elif color == "blue" or color == "BLUE":
+            print(Fore.BLUE + text_cprint)
+        elif color == "green" or color == "GREEN":
+            print(Fore.GREEN + text_cprint)
+        elif color == "black" or color == "BLACK":
+            print(Fore.BLACK + text_cprint)
+        elif color == "white" or color == "WHITE":
+            print(Fore.WHITE + text_cprint)
 
-def function_click_button():
-    win2 = tk.Tk()
-    
-    win2.geometry("300x200")
-    win2.title("New Window")
-    
-    tk.Label(win2, text="Created New Window!")
-    
-    win2.mainloop()
-    
-def ui():
-    root = tk.Tk()
-    
-    tk.geometry("800x600")
-    tk.title("UI")
-    
-    tk.Label(root, text="Welcome!")
-    tk.Button(root, text="click", command=function_click_button)
-    
-def ui_label():
-    label_win = tk.Tk()
-    
-    tk.geometry("800x600")
-    tk.title("Label")
-    
-    tk.Label(label_win, text="Text :")
-    
-    label_win.mainloop()
-
-def ui_button():
-    button_win = tk.Tk()
-    
-    tk.geometry("400x200")
-    tk.title("Button")
-    
-    tk.Button(button_win, text="click")
-   
-    button_win.mainloop()
+class os:
+    def ext(status) -> int:
+        exit(status)
+    def ret(boolean) -> bool:
+        return boolean
+    def mkd(name_dir_create):
+        os.mkdir(name_dir_create)
+    def rmd(name_dir_remove):
+        os.rmdir(name_dir_remove):
+    def opn(name_dir_open, variable):
+        variable = open(name_dir_open)
+        
+class gui:
+    def pywork_new_button(text_button, function_buttoncallback):
+        tk.Button(root, text_button, command=function_buttoncallback)
+    def pywork_new_label(text_label):
+        tk.Label(root, text_label)
+    def pywork_new_window(screen_widthheight, name_window):
+        root = tk.Tk()
+        root.title(name_window)
+        root.geometry(screen_widthheight)
+        root.mainloop()
+    def pywork_destroy_window():
+        root.destroy()
+    def pywork_new_placeholder(text_placeholder):
+        tk.Input(root, text_placeholder)
