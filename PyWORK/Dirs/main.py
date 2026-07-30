@@ -5,7 +5,7 @@ import time
 from colorama import Fore
 import os
 
-class cmd:    
+class pywork_cmd:    
     def time_now():
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("Time now :" + now)
@@ -52,7 +52,7 @@ class cmd:
     def sprints(text_sprints):
         print(sprints)
 
-class os:
+class pywork_os:
     def ext(status) -> int:
         exit(status)
     def ret(boolean) -> bool:
@@ -64,17 +64,17 @@ class os:
     def opn(name_dir_open, variable):
         variable = open(name_dir_open)
         
-class gui:
-    def pywork_new_button(text_button, function_buttoncallback):
+class pywork_gui:
+    def new_button(text_button, function_buttoncallback):
         tk.Button(root, text_button, command=function_buttoncallback)
-    def pywork_new_label(text_label):
+    def new_label(text_label):
         tk.Label(root, text_label)
-    def pywork_new_window(screen_widthheight, name_window):
+    def new_window(screen_widthheight, name_window):
         root = tk.Tk()
         root.title(name_window)
         root.geometry(screen_widthheight)
         root.mainloop()
-    def pywork_destroy_window():
+    def destroy_window():
         root.destroy()
-    def pywork_new_placeholder(text_placeholder):
+    def placeholder(text_placeholder):
         tk.Input(root, text_placeholder)
