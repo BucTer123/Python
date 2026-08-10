@@ -63,18 +63,6 @@ class pywork_os:
         os.rmdir(name_dir_remove):
     def opn(name_dir_open, variable):
         variable = open(name_dir_open)
-        
-class pywork_gui:
-    def new_button(text_button, function_buttoncallback):
-        tk.Button(root, text_button, command=function_buttoncallback)
-    def new_label(text_label):
-        tk.Label(root, text_label)
-    def new_window(screen_widthheight, name_window):
-        root = tk.Tk()
-        root.title(name_window)
-        root.geometry(screen_widthheight)
-        root.mainloop()
-    def destroy_window():
         root.destroy()
     def placeholder(text_placeholder):
         tk.Input(root, text_placeholder)
