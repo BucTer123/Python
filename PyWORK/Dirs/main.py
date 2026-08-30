@@ -1,5 +1,4 @@
 import requests as rq
-import tkinter as tk 
 import math
 import time 
 from colorama import Fore
