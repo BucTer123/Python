@@ -63,6 +63,4 @@ class pywork_os:
         os.rmdir(name_dir_remove):
     def opn(name_dir_open, variable):
         variable = open(name_dir_open)
-        root.destroy()
-    def placeholder(text_placeholder):
-        tk.Input(root, text_placeholder)
+        
