@@ -15,9 +15,9 @@ def main():
 
     print(now + "\n")
 
-    question = input("Do you want to start ? (y/n) :")
+    question = input(">>> ")
 
-    if question == "y" or question == "Y":
+    if question == "Start()" or question == "Start();":
         print(text2art("S T A R T !"))
         print("Okay!")
         script.zz()
