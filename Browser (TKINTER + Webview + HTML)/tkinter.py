@@ -17,6 +17,6 @@ tk.Label(root, text="Welcome!")
 
 tk.Button(root, text="Start", command=browse)
 
-tk.Button(root, text="Leave", command=leave_callback)
+tk.Button(root, text="Leave", command=leave_callbck)
 
 root.mainloop()
