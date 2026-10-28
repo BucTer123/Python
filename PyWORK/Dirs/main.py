@@ -9,15 +9,8 @@ class pywork_cmd:
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print("Time now :" + now)
     
-    def math(a, b, c) -> float:
-        if c == "hlp_math":
-            print("1 => hlp_math\n")
-            print("2 => +(plus) \n")
-            print("3 => -(minus) \n")
-            print("4 => *(multiply/multi)\n")
-            print("5 => /(divide)\n")
-            print("6 => **(power/pow)\n")
-        elif c == "+" or c == "plus":
+    def math(a, b, c):
+        if c == "+" or c == "plus":
             plus = a + b
             print("A + B =" + plus)
         elif c == "-" or c == "minus":
