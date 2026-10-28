@@ -4,50 +4,30 @@ import os
 
 class pywork_fun:
 
-   def artz():
-      cmd_artz = input("Write text :")
-      cmd_artz_color = input("Write color :")
-   
-      if cmd_artz_color == "what?":
-           print("1 => RED \n")
-           print("2 => BLUE \n")
-           print("3 => CYAN \n")
-           print("4 => WHITE\n")
-           print("5 => GREEN\n")
-           print("6 => YELLOW\n")
-       elif cmd_artz_color == "RED":
+   def artz(text_input, cmd_artz_color):
+       if cmd_artz_color == "RED" or cmd_artz_color == "red":
           print(Fore.RED + text_input)
-       elif cmd_artz_color == "BLUE":
+       elif cmd_artz_color == "BLUE" or cmd_artz_color == "blue":
           print(Fore.BLUE + text_input)
-       elif cmd_artz_color == "CYAN":
+       elif cmd_artz_color == "CYAN" or cmd_artz_color == "cyan":
           print(Fore.CYAN + text_input)
-       elif cmd_artz_color == "WHITE":
+       elif cmd_artz_color == "WHITE" or cmd_artz_color == "white":
           print(Fore.WHITE + text_input)
-       elif cmd_artz_color == "GREEN":
+       elif cmd_artz_color == "GREEN" or cmd_artz_color == "green":
           print(Fore.GREEN + text_input) 
-       elif cmd_artz_color == "YELLOW":
+       elif cmd_artz_color == "YELLOW" or cmd_artz_color == "yellow":
           print(Fore.YELLOW + text_input)
    
-   def color_text():
-      text_input = input("Write text :")
-      text_color = input("Write color :")
-    
-       if text_color == "what?":
-           print("1 => RED \n")
-           print("2 => BLUE \n")
-           print("3 => CYAN \n")
-           print("4 => WHITE\n")
-           print("5 => GREEN\n")
-           print("6 => YELLOW\n")
-       elif text_color == "RED":
+   def color_text(text_input, text_color):
+       elif text_color == "RED" or cmd_artz_color == "red":
            print(Fore.RED + text_input)
-       elif text_color == "BLUE":
+       elif text_color == "BLUE" or cmd_artz_color == "blue":
            print(Fore.BLUE + text_input)
-       elif text_color == "CYAN":
+       elif text_color == "CYAN" or cmd_artz_color == "cyan":
            print(Fore.CYAN + text_input)
-       elif text_color == "WHITE":
+       elif text_color == "WHITE" or cmd_artz_color == "white":
            print(Fore.WHITE + text_input)
-       elif text_color == "GREEN":
+       elif text_color == "GREEN" or cmd_artz_color == "green":
            print(Fore.GREEN + text_input) 
-       elif text_color == "YELLOW":
+       elif text_color == "YELLOW" or cmd_artz_color == "yellow":
            print(Fore.YELLOW + text_input)
