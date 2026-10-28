@@ -1,0 +1,24 @@
+pywork_fun.artz(<text>, <string>);
+pywork_fun.color_text(<text>, <string>);
+
+pywork_cmd.time_now();
+pywork_cmd.math(<int>, <int>, <string>);
+pywork_cmd.output(<string>);
+pywork_cmd.echoln(<string>);
+pywork_cmd.printf(<string>);
+pywork_cmd.echo(<string>);
+pywork_cmd.out(<string>);
+pywork_cmd.sprints(<string>);
+
+pywork_os.ext(<int>);
+pywork_os.ret(<boolean>);
+pywork_os.mkd(<string>);
+pywork_os.rmd(<string>);
+pywork_os.opn(<string>, <string>);
+
+pywork_ui.ext();
+pywork_ui.new_window(<int>, <int>, <string>);
+pywork_ui.new_button(<string>);
+pywork_ui.new_label(<string>);
+pywork_ui.new_input(<string>);
+pywork_ui.stylesheet(<string>);
