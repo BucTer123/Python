@@ -34,7 +34,7 @@ class pywork_cmd:
     def output(text_output):
         print(text_output)
     def echoln(text_echoln):
-        print(text_echoln):
+        print(text_echoln)
     def printf(text_printf):
         print(text_printf)
     def echo(text_echo):
